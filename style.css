@@ -1,0 +1,13 @@
+#allSounds{
+    display: grid;
+    grid-template-columns: repeat(5, 4rem);
+    grid-template-rows: repeat(2, 4rem);
+
+}
+
+#allSounds > div{
+    border: solid 1px black;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 4rem;
+}

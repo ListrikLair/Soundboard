@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #wholePage{
+            background-color: rgb(255, 255, 255);
+        } */
+
+        #allSounds {
+            display: grid;
+            grid-template-columns: repeat(2, 8rem);
+            grid-template-rows: repeat(5, 4rem);
+
+        }
+
+        #allSounds>div {
+            border: solid 1px black;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 3rem;
+            margin-top: 1rem;
+            margin-left: 1rem;
+        }
+        
+        .color {
+            background-color: rgb(61, 208, 48);
+        }
+
+        .color1 {
+            background-color: rgb(36, 119, 161);
+        }
+
+        .crabRave {
+            background-color: blueviolet;
+            border: solid 1px black;
+            border-radius: 20%;
+            height: 8rem;
+            width: 15rem;
+            text-align: center;
+            line-height: 8rem;
+            font-size: 250%;
+            font-style: oblique;
+            margin-top: 1rem;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wholePage">
+        <div id="allSounds">
+            <div class="color" onclick="play('augh')">Augh
+                <audio id="augh" class="sound" src="./audio/augh.mp3"></audio>
+            </div>
+            <div class="color1" onclick="play('bingChiling')">Bing chiling
+                <audio id="bingChiling" class="sound" src="./audio/bingChiling.mp3"></audio>
+            </div>
+            <div class="color1" onclick="play('bonk')">Bonk
+                <audio id="bonk" class="sound" src="./audio/bonk.mp3"></audio>
+            </div>
+            <div class="color" onclick="play('bruh')"> Bruh
+                <audio id="bruh" class="sound" src="./audio/bruh.mp3"></audio>
+            </div>
+            <div class="color" onclick="play('emotionalDamage')">Emotional damage
+                <audio id="emotionalDamage" class="sound" src="./audio/emotionalDamage.mp3"></audio>
+            </div>
+            <div class="color1" onclick="play('metalPipe')">Metal Pipe
+                <audio id="metalPipe" class="sound" src="./audio/metalPipe.mp3"></audio>
+            </div>
+            <div class="color1" onclick="play('outro')">Outro
+                <audio id="outro" class="sound" src="./audio/outro.mp3"></audio>
+            </div>
+            <div class="color" onclick="play('pufferFishGag')">Pufferfish
+                <audio id="pufferFishGag" class="sound" src="./audio/pufferFishGag.mp3"></audio>
+            </div>
+            <div class="color" onclick="play('twoHoursLater')">Two hours later
+                <audio id="twoHoursLater" class="sound" src="./audio/twoHoursLater.mp3"></audio>
+            </div>
+            <div class="color1" onclick="play('vineBoom')">Vine boom
+                <audio id="vineBoom" class="sound" src="./audio/vineBoom.mp3"></audio>
+            </div>
+        </div>
+        <div class="crabRave" onclick="playRave('crabRave')">Rave Time
+            <audio id="crabRave" class="sound" src="./audio/crabRave.mp3"></audio>
+        </div>
+    </div>
+    <script>
+        function play(selectedSound) {
+            document.getElementById(selectedSound).play();
+        }
+
+        function playRave(selectedSound) {
+            document.getElementById(selectedSound).play();
+            // let backgroundChange = setInterval(colorChange, 5000)
+            // colorChange();
+        }
+
+        // function colorChange(){
+        //     let red = Math.floor((Math.random()*255));
+        //     let green = Math.floor((Math.random()*255));
+        //     let blue = Math.floor((Math.random()*255));
+        //     let page = document.getElementById("wholePage");
+        //     page.style.background = 
+        // }
+    </script>
+</body>
+
+</html>
